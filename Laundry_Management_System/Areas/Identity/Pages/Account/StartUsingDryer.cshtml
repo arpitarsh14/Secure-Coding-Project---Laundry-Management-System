@@ -1,0 +1,12 @@
+﻿@page
+@model StartUsingDryerModel
+@using Laundry_Management_System.Models;
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.RazorPages
+
+<h1>Start Using Machine</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="DryerMachineId" />    
+    <button type="submit">Start Using</button>
+</form>

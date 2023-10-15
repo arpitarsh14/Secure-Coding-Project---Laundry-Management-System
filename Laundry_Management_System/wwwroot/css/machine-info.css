@@ -1,0 +1,30 @@
+/* CSS for MachineInfo page */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+}
+
+h3 {
+    font-size: 18px;
+    color: #007BFF;
+}
+
+p {
+    font-size: 16px;
+    margin: 5px 0;
+
+}
+
+/* You can add more styles as needed */

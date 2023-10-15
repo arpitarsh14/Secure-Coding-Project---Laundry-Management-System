@@ -1,0 +1,25 @@
+﻿@page
+@model ManageeModel
+
+<form method="post">
+    <h4>Add EWallet</h4>
+    <h5><span id="balance">Balance: $@Model.UserBalance</span></h5>
+    <div class="form-group">
+        <label asp-for="EWallet.CardNumber">Card Number (Must be a 6 digit card number)</label>
+        <input asp-for="EWallet.CardNumber" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="EWallet.Balance">Balance (must be between 1 - 100)</label>
+        <input asp-for="EWallet.Balance" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Add EWallet</button>
+    
+    <a href="/Identity/Account/RemoveEWallet" class="btn btn-danger">Remove EWallet</a>
+</form>
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
