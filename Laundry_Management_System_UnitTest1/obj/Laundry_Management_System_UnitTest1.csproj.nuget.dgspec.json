@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arpit\\source\\repo\\Laundry_Management_System\\Laundry_Management_System_UnitTest1\\Laundry_Management_System_UnitTest1.csproj": {}
+    "C:\\Users\\arpit\\source\\repo\\backup\\enpm809wfall2023project-arpit777\\Laundry_Management_System_UnitTest1\\Laundry_Management_System_UnitTest1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arpit\\source\\repo\\Laundry_Management_System\\Laundry_Management_System\\Laundry_Management_System.csproj": {
+    "C:\\Users\\arpit\\source\\repo\\backup\\enpm809wfall2023project-arpit777\\Laundry_Management_System\\Laundry_Management_System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arpit\\source\\repo\\Laundry_Management_System\\Laundry_Management_System\\Laundry_Management_System.csproj",
+        "projectUniqueName": "C:\\Users\\arpit\\source\\repo\\backup\\enpm809wfall2023project-arpit777\\Laundry_Management_System\\Laundry_Management_System.csproj",
         "projectName": "Laundry_Management_System",
-        "projectPath": "C:\\Users\\arpit\\source\\repo\\Laundry_Management_System\\Laundry_Management_System\\Laundry_Management_System.csproj",
+        "projectPath": "C:\\Users\\arpit\\source\\repo\\backup\\enpm809wfall2023project-arpit777\\Laundry_Management_System\\Laundry_Management_System.csproj",
         "packagesPath": "C:\\Users\\arpit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arpit\\source\\repo\\Laundry_Management_System\\Laundry_Management_System\\obj\\",
+        "outputPath": "C:\\Users\\arpit\\source\\repo\\backup\\enpm809wfall2023project-arpit777\\Laundry_Management_System\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arpit\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -86,14 +86,14 @@
         }
       }
     },
-    "C:\\Users\\arpit\\source\\repo\\Laundry_Management_System\\Laundry_Management_System_UnitTest1\\Laundry_Management_System_UnitTest1.csproj": {
+    "C:\\Users\\arpit\\source\\repo\\backup\\enpm809wfall2023project-arpit777\\Laundry_Management_System_UnitTest1\\Laundry_Management_System_UnitTest1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arpit\\source\\repo\\Laundry_Management_System\\Laundry_Management_System_UnitTest1\\Laundry_Management_System_UnitTest1.csproj",
+        "projectUniqueName": "C:\\Users\\arpit\\source\\repo\\backup\\enpm809wfall2023project-arpit777\\Laundry_Management_System_UnitTest1\\Laundry_Management_System_UnitTest1.csproj",
         "projectName": "Laundry_Management_System_UnitTest1",
-        "projectPath": "C:\\Users\\arpit\\source\\repo\\Laundry_Management_System\\Laundry_Management_System_UnitTest1\\Laundry_Management_System_UnitTest1.csproj",
+        "projectPath": "C:\\Users\\arpit\\source\\repo\\backup\\enpm809wfall2023project-arpit777\\Laundry_Management_System_UnitTest1\\Laundry_Management_System_UnitTest1.csproj",
         "packagesPath": "C:\\Users\\arpit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arpit\\source\\repo\\Laundry_Management_System\\Laundry_Management_System_UnitTest1\\obj\\",
+        "outputPath": "C:\\Users\\arpit\\source\\repo\\backup\\enpm809wfall2023project-arpit777\\Laundry_Management_System_UnitTest1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arpit\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -110,8 +110,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\arpit\\source\\repo\\Laundry_Management_System\\Laundry_Management_System\\Laundry_Management_System.csproj": {
-                "projectPath": "C:\\Users\\arpit\\source\\repo\\Laundry_Management_System\\Laundry_Management_System\\Laundry_Management_System.csproj"
+              "C:\\Users\\arpit\\source\\repo\\backup\\enpm809wfall2023project-arpit777\\Laundry_Management_System\\Laundry_Management_System.csproj": {
+                "projectPath": "C:\\Users\\arpit\\source\\repo\\backup\\enpm809wfall2023project-arpit777\\Laundry_Management_System\\Laundry_Management_System.csproj"
               }
             }
           }
