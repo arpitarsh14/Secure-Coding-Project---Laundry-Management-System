@@ -1,0 +1,112 @@
+﻿@page
+@using Laundry_Management_System.Areas.Identity.Pages.Admin;
+@model AdminMachineInfoModel
+
+@{
+    ViewData["Title"] = "                                                  Machine Information";
+
+    <br />
+    //<h3><span id="balance">                                                           Balance: $@Model.UserBalance</span></h3>
+    // <link rel="stylesheet" href="~/css/machine-info.css" asp-append-version="true" />
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+
+            <h2>               Washing Machines</h2>
+            <br />
+            <div class="col-md-14">
+               
+                <form method="post" asp-page-handler="AddNewWashingMachine" class="mt-2">
+                    <div class="input-group">
+                        <input type="text" name="newWMachine" class="form-control" placeholder="Washing Machine Name" />
+                        <input type="number" name="newWMCost" class="form-control" placeholder="Cost" />
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-success">Add Washing Machine</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            @foreach (var machine in Model.WashingMachines)
+            {
+                <div class="card mb-3">
+                    <div class="card-body" style="background-color: #cce5ff; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h3 class="card-title">@machine.WMachine</h3>
+                            <p class="card-text">Cost: @machine.Cost</p>
+                            <p class="card-text">Availability: @(machine.Availability ? "Available" : "In Use")</p>
+                        </div>
+                        @if (machine.Availability)
+                        {
+                            <form method="post" asp-page-handler="UpdateWashingMachineCost" class="mt-2">
+                                <input type="hidden" name="machineId" value="@machine.WashingMachineId" />
+                                <div class="input-group">
+                                    <input type="number" step="0.01" name="newCost" class="form-control" placeholder="New Cost" />
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary">Change Cost</button>
+                                    </div>
+                                </div>
+                            </form>
+                        }
+
+                        <form method="post" asp-page-handler="RemoveWashingMachine" class="mt-2">
+                            <input type="hidden" name="machineId" value="@machine.WashingMachineId" />
+                            <button type="submit" class="btn btn-danger">Remove Machine</button>
+                        </form>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="col-md-6">
+            <h2>                    Dryer Machines</h2>
+            <br />
+            <div class="col-md-14">
+               
+                <form method="post" asp-page-handler="AddNewDryerMachine" class="mt-2">
+                    <div class="input-group">
+                        <input type="text" name="newDMachine" class="form-control" placeholder="Dryer Machine Name" />
+                        <input type="number" name="newDMCost" class="form-control" placeholder="Cost" />
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-success">Add Dryer Machine</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            @foreach (var machine in Model.DryerMachines)
+            {
+                <div class="card mb-3">
+                    <div class="card-body" style="background-color: #cce5ff; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h3 class="card-title">@machine.DMachine</h3>
+                            <p class="card-text">Cost: @machine.Cost</p>
+                            <p class="card-text">Availability: @(machine.Availability ? "Available" : "In Use")</p>
+                        </div>
+                        @if (machine.Availability)
+                        {
+                            <form method="post" asp-page-handler="UpdateDryerMachineCost" class="mt-2">
+                                <input type="hidden" name="machineId" value="@machine.DryerMachineId" />
+                                <div class="input-group">
+                                    <input type="number" step="0.01" name="newCost" class="form-control" placeholder="New Cost" />
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary">Change Cost</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <form method="post" asp-page-handler="RemoveDryerMachine" class="mt-2">
+                                <input type="hidden" name="machineId" value="@machine.DryerMachineId" />
+                                <button type="submit" class="btn btn-danger">Remove Machine</button>
+                            </form>
+                        }
+                    </div>
+                </div>
+            }
+            
+        </div>
+    </div>
+</div>
+

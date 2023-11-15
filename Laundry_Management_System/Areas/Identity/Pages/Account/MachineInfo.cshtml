@@ -1,0 +1,56 @@
+﻿@page "/"
+@model MachineInfoModel
+
+@{
+    ViewData["Title"] = "                               Machine Information";
+    <br />
+    <h3><span id="balance">                                                           Balance: $@Model.UserBalance</span></h3>
+    // <link rel="stylesheet" href="~/css/machine-info.css" asp-append-version="true" />
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+
+            <h2>               Washing Machines</h2>
+           
+            @foreach (var machine in Model.WashingMachines)
+            {
+                <div class="card mb-3">
+                    <div class="card-body" style="background-color: #cce5ff; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h3 class="card-title">@machine.WMachine</h3>
+                            <p class="card-text">Cost: @machine.Cost</p>
+                            <p class="card-text">Availability: @(machine.Availability ? "Available" : "In Use")</p>
+                        </div>
+                        @if (machine.Availability)
+                        {
+                            <a asp-page="./StartUsingWashing" asp-route-wmachineId="@machine.WashingMachineId" class="btn btn-success">Start Using</a>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="col-md-6">
+            <h2>                    Dryer Machines</h2>
+            @foreach (var machine in Model.DryerMachines)
+            {
+                <div class="card mb-3">
+                    <div class="card-body" style="background-color: #c3e6cb; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h3 class="card-title">@machine.DMachine</h3>
+                            <p class="card-text">Cost: @machine.Cost</p>
+                            <p class="card-text">Availability: @(machine.Availability ? "Available" : "In Use")</p>
+                        </div>
+                        @if (machine.Availability)
+                        {
+                            <a asp-page="./StartUsingDryer" asp-route-dmachineId="@machine.DryerMachineId" class="btn btn-success">Start Using</a>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

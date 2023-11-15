@@ -1,0 +1,19 @@
+﻿@page
+@model StartUsingWashingModel
+@using Laundry_Management_System.Models;
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.RazorPages
+
+<h1>Start Using Machine</h1>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">
+        @Model.ErrorMessage
+    </div>
+}
+
+<form method="post">
+    <input type="hidden" asp-for="WashingMachineId" />
+    <button type="submit">Start Using</button>
+</form>
