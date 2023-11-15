@@ -4,7 +4,7 @@ namespace Identity.Models
 {
     public class EmailHelper
     {
-        public bool SendEmail(string userEmail, string confirmationLink)
+        public async Task SendEmail(string userEmail,string subject, string confirmationLink)
         {
             SmtpClient client = new SmtpClient();
             client.Credentials = new System.Net.NetworkCredential("arpitarsh@outlook.com", "Pa04word@");
@@ -24,13 +24,13 @@ namespace Identity.Models
             try
             {
                 client.Send(mailMessage);
-                return true;
+                
             }
             catch (System.Exception ex)
             {
                 // log exception
             }
-            return false;
+           
         }
     }
 }

@@ -22,7 +22,7 @@ builder.Services.AddDbContext<AuthDbContext>(options => options.UseSqlite(connec
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     // Other identity options...
-    //options.SignIn.RequireConfirmedAccount = true; // Always enable confirmation requirement
+    options.SignIn.RequireConfirmedAccount = true; // Always enable confirmation requirement
     //options.User.RequireUniqueEmail = true;
 }).AddEntityFrameworkStores<AuthDbContext>()
  .AddDefaultTokenProviders();
